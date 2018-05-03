@@ -75,13 +75,12 @@ var MovieImg = React.createClass({
 	}
 });
 
-var moviesElements = movies.map(function(movie) {
-	return (React.createElement(Movie, {key:movie.id, movie: movie})
-	)
-})
-
 var MovieList = React.createClass({
    	render: function() {
+		var moviesElements = movies.map(function(movie) {
+			return (React.createElement(Movie, {key:movie.id, movie: movie})
+			)
+		})
 		return (  
 			React.createElement('ul', {}, moviesElements)
 		);
